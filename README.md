@@ -1,8 +1,8 @@
 # The World in One Day — 24 November 2026
 
-[![make.fun — news-image-20261124](https://img.shields.io/badge/make.fun-news--image--20261124-blue)](https://make.fun/bounty/news-image-20261124)
-[![make.fun bounties](https://img.shields.io/badge/make.fun-bounties-green)](https://make.fun)
-[![repo](https://img.shields.io/badge/repo-ImRevoltexee%2FMakefun--news--20261124-orange)](https://github.com/ImRevoltexee/Makefun-news-20261124)
+[![make.fun · news-image-20261124](https://make.fun/badge/news-image-20261124.svg)](https://make.fun/bounty/news-image-20261124?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261124)
+[![rank](https://make.fun/badge/news-image-20261124/ImRevoltexee/Makefun-news-20261124/rank.svg)](https://make.fun/bounty/news-image-20261124/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261124)
+[![reward](https://make.fun/badge/news-image-20261124/ImRevoltexee/Makefun-news-20261124/reward.svg)](https://make.fun/bounty/news-image-20261124?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261124)
 
 A newspaper-style infographic summing up the world's news on
 **Tuesday, 24 November 2026** — six front-page stories plus three
