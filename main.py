@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 """Entrypoint for the 24 November 2026 news-image entry.
 
-Validates entry.png (a whole PNG or JPEG file, at most 1 MiB and at most
-1024x1024 pixels) and copies its exact bytes to /output/entry.png.
+Validates an image file (a whole PNG or JPEG file, at most 1 MiB and at
+most 1024x1024 pixels) and copies its exact bytes to /output/entry.png.
+
+Usage: main.py [input-image]
+The input image defaults to entry.png next to this script when no
+argument is given.
 
 Standard library only. Exit 0 on success, exit 1 on any invalid input.
 """
@@ -57,9 +61,17 @@ def jpeg_dims(data):
     return None
 
 
-def main():
+def main(argv=None):
+    if argv is None:
+        argv = sys.argv[1:]
+    if len(argv) > 1:
+        print("usage: main.py [input-image]", file=sys.stderr)
+        return 1
     here = os.path.dirname(os.path.abspath(__file__))
-    src = os.path.join(here, "entry.png")
+    if argv:
+        src = argv[0]
+    else:
+        src = os.path.join(here, "entry.png")
     try:
         with open(src, "rb") as fh:
             data = fh.read()
@@ -78,7 +90,7 @@ def main():
         dims = jpeg_dims(data)
         kind = "JPEG"
     if dims is None:
-        print("error: entry.png is neither a valid PNG nor a valid JPEG",
+        print(f"error: {src} is neither a valid PNG nor a valid JPEG",
               file=sys.stderr)
         return 1
 
